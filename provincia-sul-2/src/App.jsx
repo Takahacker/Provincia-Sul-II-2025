@@ -1,35 +1,95 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+    <div className="app">
+      <img
+        src="/assets/img/logo-eacre.png"
+        alt="EACRE logo"
+        className="event-logo"
+      />
+      {/* Header */}
+      <Header />
+
+      {/* Banner */}
+      <section className="banner">
+        <img
+          src="/assets/img/banner-image.png"
+          alt="No Caminho de Emaús"
+          className="banner-image"
+        />
+      </section>
+
+      {/* Menu */}
+      <section className="menu">
+        <a className="item" href="">
+          <MenuItem
+            icon="/assets/img/icon-programacao.png"
+            label="Programação"
+          />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a className="item" href="">
+          <MenuItem
+            icon="/assets/img/icon-caderno.png"
+            label="Caderno do Encontro"
+          />
         </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <a className="item" href="">
+          <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
+        </a>
+        <a className="item" href="">
+          <MenuItem
+            icon="/assets/img/icon-duvidas.png"
+            label="Dúvidas para Plenária"
+          />
+        </a>
+        <a className="item" href="">
+          <MenuItem icon="/assets/img/icon-fotos.png" label="Ver Fotos" />
+        </a>
+        <a className="item" href="">
+          <MenuItem icon="/assets/img/icon-camera.png" label="Enviar Fotos" />
+        </a>
+      </section>
+
+      <section className="submenu">
+        <a className="subitem" href="">
+          <MenuItem icon="/assets/img/icon-mapa.png" label="Mapa das Salas" />
+        </a>
+        <a className="subitem" href="">
+          <MenuItem icon="/assets/img/icon-avaliacao.png" label="Avaliação" />
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="social-icons">
+          <a href="https://instagram.com">
+            <img src="/assets/img/icon-instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://facebook.com">
+            <img src="/assets/img/icon-facebook.png" alt="Facebook" />
+          </a>
+          <a href="https://youtube.com">
+            <img src="/assets/img/icon-youtube.png" alt="YouTube" />
+          </a>
+        </div>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Equipes de Nossa Senhora - Província Sul I - São Paulo Capital II -
+          2025
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </footer>
+    </div>
+  );
 }
 
-export default App
+// Menu Item Component
+function MenuItem({ icon, label }) {
+  return (
+    <div className="menu-item">
+      <img src={icon} alt={label} className="menu-icon" />
+    </div>
+  );
+}
+
+export default App;

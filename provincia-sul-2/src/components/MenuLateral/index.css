@@ -1,0 +1,35 @@
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -100%; /* Start completely off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #007bff;
+  color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.menu-lateral.open {
+  left: 0; /* Slide in from the left */
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+}
+
+nav a {
+  display: block;
+  margin: 1rem 0;
+  text-decoration: none;
+  color: #fff;
+}
