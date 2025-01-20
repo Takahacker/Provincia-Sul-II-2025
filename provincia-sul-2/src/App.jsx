@@ -19,7 +19,10 @@ function App() {
     // Apply staggered animation delay to menu items
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach((item, index) => {
-      item.style.animationDelay = `${index * 0.2}s`;
+      setTimeout(() => {
+        item.classList.add('loaded');
+        item.style.animationDelay = `${index * 0.2}s`;
+      }, index * 200); // Delay each item by 200ms
     });
   }, []);
 

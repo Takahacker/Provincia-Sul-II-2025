@@ -91,6 +91,10 @@ body {
   animation: fadeIn 0.5s forwards; /* Apply animation */
 }
 
+.menu-item.loaded {
+  opacity: 1; /* Make visible */
+}
+
 .item {
   width: 40%;
 }
