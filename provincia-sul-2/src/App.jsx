@@ -1,14 +1,33 @@
 import "./App.css";
 import Header from "./components/Header";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    // Handle scroll effect for the event logo
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const logoElement = document.querySelector('.event-logo');
+      logoElement.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Apply staggered animation delay to menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((item, index) => {
+      item.style.animationDelay = `${index * 0.2}s`;
+    });
+  }, []);
+
   return (
     <div className="app">
-      <img
-        src="/assets/img/logo-eacre.png"
-        alt="EACRE logo"
-        className="event-logo"
-      />
+      <div className="event-logo-frame">
+        <div className="event-logo" />
+      </div>
       {/* Header */}
       <Header />
 
