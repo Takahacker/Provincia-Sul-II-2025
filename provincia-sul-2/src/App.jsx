@@ -7,20 +7,20 @@ function App() {
     // Handle scroll effect for the event logo
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const logoElement = document.querySelector('.event-logo');
+      const logoElement = document.querySelector(".event-logo");
       logoElement.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     // Apply staggered animation delay to menu items
-    const menuItems = document.querySelectorAll('.menu-item');
+    const menuItems = document.querySelectorAll(".menu-item");
     menuItems.forEach((item, index) => {
       setTimeout(() => {
-        item.classList.add('loaded');
+        item.classList.add("loaded");
         item.style.animationDelay = `${index * 0.2}s`;
       }, index * 200); // Delay each item by 200ms
     });
@@ -60,7 +60,7 @@ function App() {
         <a className="item" href="">
           <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
           <MenuItem
             icon="/assets/img/icon-duvidas.png"
             label="Dúvidas para Plenária"
@@ -75,9 +75,6 @@ function App() {
       </section>
 
       <section className="submenu">
-        <a className="subitem" href="">
-          <MenuItem icon="/assets/img/icon-mapa.png" label="Mapa das Salas" />
-        </a>
         <a className="subitem" href="">
           <MenuItem icon="/assets/img/icon-avaliacao.png" label="Avaliação" />
         </a>
