@@ -17,7 +17,7 @@ const MenuLateral = React.forwardRef(({ isOpen, toggleMenu }, ref) => {
         <a className="item" href="">
           Grupos
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
           Dúvidas para Plenária
         </a>
         <a className="item" href="">
