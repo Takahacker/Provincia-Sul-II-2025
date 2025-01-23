@@ -83,13 +83,13 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="social-icons">
-          <a href="https://instagram.com">
+          <a href="https://www.instagram.com/ensbrasil">
             <img src="/assets/img/icon-instagram.png" alt="Instagram" />
           </a>
-          <a href="https://facebook.com">
+          <a href="https://www.facebook.com/ENSSRBRASIL/">
             <img src="/assets/img/icon-facebook.png" alt="Facebook" />
           </a>
-          <a href="https://youtube.com">
+          <a href="https://www.youtube.com/@equipesdenossasenhora">
             <img src="/assets/img/icon-youtube.png" alt="YouTube" />
           </a>
         </div>
