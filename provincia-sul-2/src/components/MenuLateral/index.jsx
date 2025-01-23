@@ -26,10 +26,7 @@ const MenuLateral = React.forwardRef(({ isOpen, toggleMenu }, ref) => {
         <a className="item" href="">
           Enviar Fotos
         </a>
-        <a className="subitem" href="">
-          Mapa das Salas
-        </a>
-        <a className="subitem" href="">
+        <a className="item" href="">
           Avaliação
         </a>
       </nav>
