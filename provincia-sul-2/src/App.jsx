@@ -82,6 +82,7 @@ function App() {
 
       {/* Footer */}
       <footer className="footer">
+        <img src="/assets/img/logo.png" alt="Logo" className="footer-logo" />
         <div className="social-icons">
           <a href="https://www.instagram.com/ensbrasil">
             <img src="/assets/img/icon-instagram.png" alt="Instagram" />

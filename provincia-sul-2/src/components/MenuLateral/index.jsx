@@ -4,6 +4,7 @@ import "./index.css";
 const MenuLateral = React.forwardRef(({ isOpen, toggleMenu }, ref) => {
   return (
     <div ref={ref} className={`menu-lateral ${isOpen ? "open" : ""}`}>
+      <img src="/assets/img/logo.png" alt="Logo" className="menu-logo" />
       <button className="close-btn" onClick={toggleMenu}>
         X
       </button>
