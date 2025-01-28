@@ -1,14 +1,29 @@
 import "./App.css";
 import Header from "./components/Header";
-import { useEffect } from "react";
+import PdfPreview from "./components/PdfPreview";
+import { useEffect, useState } from "react";
+import MenuLateral from './components/MenuLateral';
 
 function App() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isPdfOpen, setPdfOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const togglePdfViewer = () => {
+    setPdfOpen(!isPdfOpen);
+  };
+
   useEffect(() => {
     // Handle scroll effect for the event logo
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const logoElement = document.querySelector(".event-logo");
-      logoElement.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+      if (logoElement) {
+        logoElement.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,13 +41,15 @@ function App() {
     });
   }, []);
 
+  console.log(typeof togglePdfViewer); // Deve registrar 'function'
+
   return (
     <div className="app">
       <div className="event-logo-frame">
         <div className="event-logo" />
       </div>
       {/* Header */}
-      <Header />
+      <Header togglePdfViewer={togglePdfViewer} />
 
       {/* Banner */}
       <section className="banner">
@@ -57,7 +74,7 @@ function App() {
             label="Caderno do Encontro"
           />
         </a>
-        <a className="item" href="">
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer(); }}>
           <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
         </a>
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
@@ -99,6 +116,11 @@ function App() {
           2025
         </p>
       </footer>
+
+      {/* PDF Viewer Popup */}
+      {isPdfOpen && <PdfPreview togglePopup={togglePdfViewer} />}
+
+      <MenuLateral isOpen={isMenuOpen} toggleMenu={toggleMenu} togglePdfViewer={togglePdfViewer} />
     </div>
   );
 }

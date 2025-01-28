@@ -1,7 +1,10 @@
 import React from "react";
 import "./index.css";
+import PdfPreview from "../PdfPreview";
+import { useState } from "react";
+import App from "../../App";
 
-const MenuLateral = React.forwardRef(({ isOpen, toggleMenu }, ref) => {
+const MenuLateral = React.forwardRef(({ isOpen, toggleMenu, togglePdfViewer }, ref) => {
   return (
     <div ref={ref} className={`menu-lateral ${isOpen ? "open" : ""}`}>
       <img src="/assets/img/logo.png" alt="Logo" className="menu-logo" />
@@ -15,7 +18,7 @@ const MenuLateral = React.forwardRef(({ isOpen, toggleMenu }, ref) => {
         <a className="item" href="">
           Caderno do Encontro
         </a>
-        <a className="item" href="">
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer(); }}>
           Grupos
         </a>
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">

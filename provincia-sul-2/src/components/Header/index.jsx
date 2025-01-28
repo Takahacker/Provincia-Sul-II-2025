@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./index.css";
 import MenuLateral from "../MenuLateral";
 
-function Header() {
+function Header({ togglePdfViewer }) {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -41,7 +41,7 @@ function Header() {
           <img src="/assets/img/logo.png" alt="Logo" className="logo" />
         </a>
       </header>
-      <MenuLateral isOpen={isMenuOpen} toggleMenu={toggleMenu} ref={menuRef} />
+      <MenuLateral isOpen={isMenuOpen} toggleMenu={toggleMenu} togglePdfViewer={togglePdfViewer} ref={menuRef} />
     </>
   );
 }
