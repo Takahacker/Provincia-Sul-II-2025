@@ -7,12 +7,14 @@ import MenuLateral from './components/MenuLateral';
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isPdfOpen, setPdfOpen] = useState(false);
+  const [pdfFileUrl, setPdfFileUrl] = useState('');
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const togglePdfViewer = () => {
+  const togglePdfViewer = (fileUrl) => {
+    setPdfFileUrl(fileUrl);
     setPdfOpen(!isPdfOpen);
   };
 
@@ -62,7 +64,7 @@ function App() {
 
       {/* Menu */}
       <section className="menu">
-        <a className="item" href="">
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/2.pdf'); }}>
           <MenuItem
             icon="/assets/img/icon-programacao.png"
             label="Programação"
@@ -74,7 +76,7 @@ function App() {
             label="Caderno do Encontro"
           />
         </a>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer(); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão- EACRE 2025.pdf'); }}>
           <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
         </a>
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
@@ -118,7 +120,7 @@ function App() {
       </footer>
 
       {/* PDF Viewer Popup */}
-      {isPdfOpen && <PdfPreview togglePopup={togglePdfViewer} />}
+      {isPdfOpen && <PdfPreview togglePopup={() => setPdfOpen(false)} fileUrl={pdfFileUrl} />}
 
       <MenuLateral isOpen={isMenuOpen} toggleMenu={toggleMenu} togglePdfViewer={togglePdfViewer} />
     </div>
