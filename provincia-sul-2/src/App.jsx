@@ -64,7 +64,7 @@ function App() {
 
       {/* Menu */}
       <section className="menu">
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/2.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Programação Eacre 2025.pdf'); }}>
           <MenuItem
             icon="/assets/img/icon-programacao.png"
             label="Programação"
