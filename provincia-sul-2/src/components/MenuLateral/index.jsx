@@ -12,10 +12,10 @@ const MenuLateral = React.forwardRef(({ isOpen, toggleMenu, togglePdfViewer }, r
         X
       </button>
       <nav>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/2.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Programação Eacre 2025.pdf'); }}>
           Programação
         </a>
-        <a className="item" href="">
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Caderno de Atividades-  Eacre 2025.pdf'); }}>
           Caderno do Encontro
         </a>
         <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão- EACRE 2025.pdf'); }}>
