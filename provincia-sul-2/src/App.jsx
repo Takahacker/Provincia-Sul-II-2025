@@ -70,13 +70,13 @@ function App() {
             label="Programação"
           />
         </a>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Caderno de Atividades-  Eacre 2025.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Caderno Eacre 2025.pdf'); }}>
           <MenuItem
             icon="/assets/img/icon-caderno.png"
             label="Caderno do Encontro"
           />
         </a>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão- EACRE 2025.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão-  EACRE 2025.pdf'); }}>
           <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
         </a>
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
