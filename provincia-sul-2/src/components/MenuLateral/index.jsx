@@ -24,13 +24,13 @@ const MenuLateral = React.forwardRef(({ isOpen, toggleMenu, togglePdfViewer }, r
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
           Dúvidas para Plenária
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://photos.app.goo.gl/2V2iVw1itDzwp1DU8">
           Ver Fotos
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://photos.app.goo.gl/2V2iVw1itDzwp1DU8">
           Enviar Fotos
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://docs.google.com/forms/d/1wYNB6wMPcuaRSKQPMYodkEAfuWNjbhhzfb7en3V0OXc/edit">
           Avaliação
         </a>
       </nav>

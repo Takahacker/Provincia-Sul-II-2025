@@ -70,13 +70,13 @@ function App() {
             label="Programação"
           />
         </a>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Caderno Eacre 2025.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Caderno de Atividades-  Eacre 2025.pdf'); }}>
           <MenuItem
             icon="/assets/img/icon-caderno.png"
             label="Caderno do Encontro"
           />
         </a>
-        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão-  EACRE 2025.pdf'); }}>
+        <a className="item" href="#" onClick={(event) => { event.preventDefault(); togglePdfViewer('/assets/pdf/Grupos de Reflexão- EACRE 2025.pdf'); }}>
           <MenuItem icon="/assets/img/icon-grupos.png" label="Grupos" />
         </a>
         <a className="item" href="https://docs.google.com/forms/d/e/1FAIpQLSdu7g_wG7-8QaHFnLLtbVAdt398RZqfgkep0-qcHRSeb9jEpg/viewform">
@@ -85,16 +85,16 @@ function App() {
             label="Dúvidas para Plenária"
           />
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://photos.app.goo.gl/2V2iVw1itDzwp1DU8">
           <MenuItem icon="/assets/img/icon-fotos.png" label="Ver Fotos" />
         </a>
-        <a className="item" href="">
+        <a className="item" href="https://photos.app.goo.gl/2V2iVw1itDzwp1DU8">
           <MenuItem icon="/assets/img/icon-camera.png" label="Enviar Fotos" />
         </a>
       </section>
 
       <section className="submenu">
-        <a className="subitem" href="">
+        <a className="subitem" href="https://docs.google.com/forms/d/1wYNB6wMPcuaRSKQPMYodkEAfuWNjbhhzfb7en3V0OXc/edit">
           <MenuItem icon="/assets/img/icon-avaliacao.png" label="Avaliação" />
         </a>
       </section>
